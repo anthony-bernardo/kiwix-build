@@ -153,7 +153,7 @@ class Builder:
             package_installer = 'sudo dnf install {}'
             package_checker = 'rpm -q --quiet {}'
         elif distname in ('debian', 'Ubuntu'):
-            package_installer = 'sudo apt-get install {}'
+            package_installer = 'apt-get install {}'
             package_checker = 'LANG=C dpkg -s {} 2>&1 | grep Status | grep "ok installed" 1>/dev/null 2>&1'
         elif distname == 'Darwin':
             package_installer = 'brew install {}'
